@@ -10,7 +10,7 @@ A discord bot created mainly for personal usages. This discord can be edited fre
 - Complete Suggest System
 - Complete Give Away System
 - Complete Music System
-- AFK System (W.I.P)
+- AFK System
 - Ticket System (W.I.P)
 - Database (Mongo DB)
 
