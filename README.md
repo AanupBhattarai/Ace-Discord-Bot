@@ -10,8 +10,10 @@ A discord bot created mainly for personal usages. This discord can be edited fre
 - Complete Suggest System
 - Complete Give Away System
 - Complete Music System
+- Complete Server Info Command
+- Complete Ticket System (Multi Guild)
 - AFK System
-- Ticket System (W.I.P)
+- LockDown System (W.I.P)
 - Database (Mongo DB)
 
 ## Run Locally
@@ -50,13 +52,19 @@ Create a **config.json** inside the folder **Structures** before you run it.
 "token": "Your discord bot token",
 "Database": "Mongo DB connection string",
 "weatherApi": "Openweathermap API",
-"MemberRole": "Member Role ID of your guild ",
-"GuildCacheID": "Guild ID",
+
 "WelcomerID": "",
 "WelcomerToken": "",
 "LeftLoggerID": "",
 "LeftLoggerToken": "",
-"MessageLoggerURL": ""
+"MessageLoggerURL": "",
+
+"MemberRole": "Member Role ID of your guild ",
+"GuildCacheID": "Guild ID",
+"EveryoneID": "@everyone Id of your guild ( It's the same as Guild ID )", //OPTIONAL
+"TicketParentID": "Ticket Category ID", //OPTIONAL
+"OPENATICKET": "Open A ticket channel ID", //OPTIONAL
+"TRASNCRIPTS": "Transcripts channel ID" //OPTIONAL
 }
 ```
 
