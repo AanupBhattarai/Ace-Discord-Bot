@@ -12,8 +12,9 @@ A discord bot created mainly for personal usages. This discord can be edited fre
 - Complete Music System
 - Complete Server Info Command
 - Complete Ticket System (Multi Guild)
+- LockDown System
 - AFK System
-- LockDown System (W.I.P)
+- Chat Filter System (W.I.P)
 - Database (Mongo DB)
 
 ## Run Locally

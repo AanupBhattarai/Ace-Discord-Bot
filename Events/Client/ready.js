@@ -12,6 +12,8 @@ module.exports = {
     console.log("The bot is online now!");
     client.user.setActivity("Hello!", { type: "WATCHING" });
 
+    require("../../Systems/LockDownSys");
+
     if (!Database) return;
     mongoose
       .connect(Database, {
