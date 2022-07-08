@@ -1,8 +1,8 @@
 const { MessageEmbed, WebhookClient, GuildMember } = require("discord.js");
-// const {
-//   LeftLoggerID,
-//   LeftLoggerToken,
-// } = require("../../Structures/config.json");
+const {
+  LeftLoggerID,
+  LeftLoggerToken,
+} = require("../../Structures/config.json");
 
 module.exports = {
   name: "guildMemberRemove",
@@ -13,8 +13,8 @@ module.exports = {
     const { user, guild } = member;
 
     const LeftLogger = new WebhookClient({
-      id: process.env.LeftLoggerID,
-      token: process.env.LeftLoggerToken,
+      id: LeftLoggerID,
+      token: LeftLoggerToken,
     });
 
     const Left = new MessageEmbed()
