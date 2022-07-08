@@ -1,6 +1,6 @@
 const { Perms } = require("../Validation/Permissions");
 const { Client } = require("discord.js");
-const { GuildCacheID } = require("../../Structures/config.json");
+// const { GuildCacheID } = require("../../Structures/config.json");
 
 /**
  * @param {Client} client
@@ -44,9 +44,7 @@ module.exports = async (client, PG, Ascii) => {
   console.log(Table.toString());
 
   client.on("ready", async () => {
-    const mainGuild = await client.guilds.cache.get(
-      process.env.GuildCacheID || GuildCacheID
-    );
+    const mainGuild = await client.guilds.cache.get(process.env.GuildCacheID);
     mainGuild.commands.set(CommandsArray);
   });
 };

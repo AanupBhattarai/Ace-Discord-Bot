@@ -1,9 +1,9 @@
 const { MessageEmbed, WebhookClient, GuildMember } = require("discord.js");
-const {
-  WelcomerID,
-  WelcomerToken,
-  MemberRole,
-} = require("../../Structures/config.json");
+// const {
+//   WelcomerID,
+//   WelcomerToken,
+//   MemberRole,
+// } = require("../../Structures/config.json");
 
 module.exports = {
   name: "guildMemberAdd",
@@ -13,11 +13,11 @@ module.exports = {
   execute(member) {
     const { user, guild } = member;
 
-    member.roles.add(MemberRole);
+    member.roles.add(process.env.MemberRole);
 
     const Welcomer = new WebhookClient({
-      id: WelcomerID,
-      token: WelcomerToken,
+      id: process.env.WelcomerID,
+      token: process.env.WelcomerToken,
     });
 
     const Welcome = new MessageEmbed()

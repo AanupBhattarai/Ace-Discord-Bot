@@ -1,5 +1,5 @@
 const { MessageEmbed, Message, WebhookClient } = require("discord.js");
-const { MessageLoggerURL } = require("../../Structures/config.json");
+// const { MessageLoggerURL } = require("../../Structures/config.json");
 
 module.exports = {
   name: "messageUpdate",
@@ -40,7 +40,7 @@ module.exports = {
       );
     }
     new WebhookClient({
-      url: `${MessageLoggerURL}`,
+      url: `${process.env.MessageLoggerURL}`,
     })
       .send({ embeds: [LogEmbed] })
       .catch((err) => {

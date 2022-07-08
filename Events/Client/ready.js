@@ -1,6 +1,6 @@
 const { Client } = require("discord.js");
 const mongoose = require("mongoose");
-const { Database } = require("../../Structures/config.json");
+// const { Database } = require("../../Structures/config.json");
 
 module.exports = {
   name: "ready",
@@ -14,9 +14,9 @@ module.exports = {
 
     require("../../Systems/LockDownSys");
 
-    if (!Database || !process.env.Database) return;
+    if (!process.env.Database) return;
     mongoose
-      .connect(Database || process.env.Database, {
+      .connect(process.env.Database, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
       })
