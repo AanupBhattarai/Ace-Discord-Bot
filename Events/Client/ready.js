@@ -14,9 +14,9 @@ module.exports = {
 
     require("../../Systems/LockDownSys");
 
-    if (!Database) return;
+    if (!Database || !process.env.Database) return;
     mongoose
-      .connect(Database, {
+      .connect(Database || process.env.Database, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
       })

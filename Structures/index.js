@@ -26,4 +26,4 @@ require("../Systems/GiveawaySys")(client);
   require(`./Handlers/${handler}`)(client, PG, Ascii);
 });
 
-client.login(token);
+client.login(process.env.token || token);

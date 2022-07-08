@@ -44,7 +44,9 @@ module.exports = async (client, PG, Ascii) => {
   console.log(Table.toString());
 
   client.on("ready", async () => {
-    const mainGuild = await client.guilds.cache.get(GuildCacheID);
+    const mainGuild = await client.guilds.cache.get(
+      process.env.GuildCacheID || GuildCacheID
+    );
     mainGuild.commands.set(CommandsArray);
   });
 };
